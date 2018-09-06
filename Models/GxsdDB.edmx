@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="GxsdModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="affairdetails">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="generalTransactionRangeId" Type="int" />
+          <Property Name="itemTypeName" Type="varchar" MaxLength="100" />
+          <Property Name="transactionOrgTypeId" Type="int" />
+          <Property Name="itemBasicCode" Type="varchar" MaxLength="100" />
+          <Property Name="spObjectName" Type="varchar" MaxLength="100" />
+          <Property Name="depCateName" Type="varchar" MaxLength="100" />
+          <Property Name="legalPeriod" Type="int" />
+          <Property Name="version" Type="varchar" MaxLength="20" />
+          <Property Name="orgId" Type="int" />
+          <Property Name="itemImpleCode" Type="varchar" MaxLength="100" />
+          <Property Name="orgCode" Type="varchar" MaxLength="100" />
+          <Property Name="name" Type="varchar" MaxLength="500" />
+          <Property Name="exeTierName" Type="varchar" MaxLength="20" />
+          <Property Name="isNetPay" Type="varchar" MaxLength="2" />
+          <Property Name="transactionFormId" Type="int" />
+          <Property Name="isNetAppointment" Type="varchar" MaxLength="10" />
+          <Property Name="promisePeriod" Type="int" />
+          <Property Name="dealItemName" Type="varchar" MaxLength="100" />
+          <Property Name="itemTransactionResult" Type="varchar" MaxLength="500" />
+          <Property Name="supervisionCount" Type="int" />
+          <Property Name="isInternetPublic" Type="varchar" MaxLength="10" />
+          <Property Name="itemTypeCode" Type="varchar" MaxLength="100" />
+          <Property Name="orgName" Type="varchar" MaxLength="100" />
+          <Property Name="businessTypeName" Type="text" />
+          <Property Name="privUpdateTypeId" Type="int" />
+          <Property Name="relieveWay" Type="varchar" MaxLength="2000" />
+          <Property Name="transactionTime" Type="varchar" MaxLength="500" />
+          <Property Name="transactionLevelId" Type="int" />
+          <Property Name="isInvestmentProject" Type="varchar" MaxLength="2" />
+          <Property Name="transactionTypeId" Type="int" />
+          <Property Name="isExpress" Type="varchar" MaxLength="2" />
+          <Property Name="VALID" Type="int" Nullable="false" />
+          <Property Name="isFee" Type="varchar" MaxLength="100" />
+          <Property Name="feeName" Type="varchar" MaxLength="300" />
+          <Property Name="feeNorm" Type="varchar" MaxLength="2000" />
+          <Property Name="feeGist" Type="varchar" MaxLength="2000" />
+          <Property Name="feeLink" Type="varchar" MaxLength="2000" />
+          <Property Name="feeTime" Type="varchar" MaxLength="1000" />
+          <Property Name="feeAddress" Type="varchar" MaxLength="500" />
+          <Property Name="feeReduce" Type="varchar" MaxLength="2000" />
+          <Property Name="SEPCIALVERSION" Type="varchar" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="affairguidetemp">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="affairdetailsid" Type="int" />
+          <Property Name="unacceptCondition" Type="text" />
+          <Property Name="approveRange" Type="varchar" MaxLength="2000" />
+          <Property Name="superviseWay" Type="varchar" MaxLength="2000" />
+          <Property Name="dutyInfo" Type="varchar" MaxLength="2000" />
+          <Property Name="acceptCondition" Type="text" />
+          <Property Name="approveCondition" Type="text" />
+          <Property Name="accountabilityInfo" Type="varchar" MaxLength="2000" />
+          <Property Name="consultWay" Type="varchar" MaxLength="2000" />
+          <Property Name="itemCommonProcess" Type="text" />
+          <Property Name="transactionSite" Type="varchar" MaxLength="500" />
+          <Property Name="unapproveCondition" Type="varchar" MaxLength="2000" />
+          <Property Name="setGist" Type="text" />
+          <Property Name="acceptRange" Type="varchar" MaxLength="2000" />
+          <Property Name="accountabilityGist" Type="varchar" MaxLength="1000" />
+          <Property Name="faq" Type="varchar" MaxLength="1000" />
+          <Property Name="limitNum" Type="varchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="affairstemp">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="varchar" MaxLength="20" />
+          <Property Name="name" Type="varchar" MaxLength="500" />
+          <Property Name="dealItemName" Type="varchar" MaxLength="100" />
+          <Property Name="itemBasicCode" Type="varchar" MaxLength="100" />
+          <Property Name="itemImpleCode" Type="varchar" MaxLength="200" />
+          <Property Name="DEPTCODE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="orgName" Type="varchar" MaxLength="100" />
+          <Property Name="AREACODE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="legalPeriod" Type="int" />
+          <Property Name="promisePeriod" Type="int" />
+          <Property Name="transactionTypeCode" Type="varchar" MaxLength="20" />
+          <Property Name="transactionTypeName" Type="varchar" MaxLength="20" />
+          <Property Name="itemTypeName" Type="varchar" MaxLength="100" />
+          <Property Name="transactionFormName" Type="varchar" MaxLength="100" />
+          <Property Name="depCateName" Type="varchar" MaxLength="100" />
+          <Property Name="VALID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="areainfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AREANAME" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="AREACODE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PARENTCODE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="VALID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="deptinfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DEPTNAME" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="DEPTCODE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="AREACODE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="VALID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="dic_dictionarydto">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="affairdetailsid" Type="int" />
+          <Property Name="valueName" Type="varchar" MaxLength="100" />
+          <Property Name="name" Type="varchar" MaxLength="100" />
+          <Property Name="code" Type="varchar" MaxLength="100" />
+          <Property Name="valueCode" Type="varchar" MaxLength="100" />
+          <Property Name="isLocked" Type="varchar" MaxLength="100" />
+          <Property Name="VALID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="materials">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="affairdetailsid" Type="int" />
+          <Property Name="name" Type="varchar" MaxLength="300" />
+          <Property Name="code" Type="varchar" MaxLength="100" />
+          <Property Name="num" Type="int" />
+          <Property Name="dicRequireCode" Type="varchar" MaxLength="50" />
+          <Property Name="dicRequireName" Type="varchar" MaxLength="80" />
+          <Property Name="VALID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="GxsdModelStoreContainer">
+          <EntitySet Name="affairdetails" EntityType="Self.affairdetails" Schema="kunmindatadacking" store:Type="Tables" />
+          <EntitySet Name="affairguidetemp" EntityType="Self.affairguidetemp" Schema="kunmindatadacking" store:Type="Tables" />
+          <EntitySet Name="affairstemp" EntityType="Self.affairstemp" Schema="kunmindatadacking" store:Type="Tables" />
+          <EntitySet Name="areainfo" EntityType="Self.areainfo" Schema="kunmindatadacking" store:Type="Tables" />
+          <EntitySet Name="deptinfo" EntityType="Self.deptinfo" Schema="kunmindatadacking" store:Type="Tables" />
+          <EntitySet Name="dic_dictionarydto" EntityType="Self.dic_dictionarydto" Schema="kunmindatadacking" store:Type="Tables" />
+          <EntitySet Name="materials" EntityType="Self.materials" Schema="kunmindatadacking" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GxsdModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="GxsdEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="deptinfo" EntityType="GxsdModel.deptinfo" />
+          <EntitySet Name="materials" EntityType="GxsdModel.materials" />
+          <EntitySet Name="affairstemp" EntityType="GxsdModel.affairstemp" />
+          <EntitySet Name="dic_dictionarydto" EntityType="GxsdModel.dic_dictionarydto" />
+          <EntitySet Name="affairguidetemp" EntityType="GxsdModel.affairguidetemp" />
+          <EntitySet Name="affairdetails" EntityType="GxsdModel.affairdetails" />
+          <EntitySet Name="areainfo" EntityType="GxsdModel.areainfo" />
+        </EntityContainer>
+        <EntityType Name="deptinfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DEPTNAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DEPTCODE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AREACODE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VALID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="materials">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="affairdetailsid" Type="Int32" />
+          <Property Name="name" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="code" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="num" Type="Int32" />
+          <Property Name="dicRequireCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="dicRequireName" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="VALID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="affairstemp">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="dealItemName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="itemBasicCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="itemImpleCode" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="DEPTCODE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="orgName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AREACODE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="legalPeriod" Type="Int32" />
+          <Property Name="promisePeriod" Type="Int32" />
+          <Property Name="transactionTypeCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="transactionTypeName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="itemTypeName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="transactionFormName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="depCateName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="VALID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="dic_dictionarydto">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="affairdetailsid" Type="Int32" />
+          <Property Name="valueName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="code" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="valueCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="isLocked" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="VALID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="affairguidetemp">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="affairdetailsid" Type="Int32" />
+          <Property Name="unacceptCondition" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="approveRange" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="superviseWay" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="dutyInfo" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="acceptCondition" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="approveCondition" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="accountabilityInfo" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="consultWay" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="itemCommonProcess" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="transactionSite" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="unapproveCondition" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="setGist" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="acceptRange" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="accountabilityGist" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="faq" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="limitNum" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="affairdetails">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="generalTransactionRangeId" Type="Int32" />
+          <Property Name="itemTypeName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="transactionOrgTypeId" Type="Int32" />
+          <Property Name="itemBasicCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="spObjectName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="depCateName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="legalPeriod" Type="Int32" />
+          <Property Name="version" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="orgId" Type="Int32" />
+          <Property Name="itemImpleCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="orgCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="exeTierName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="isNetPay" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="transactionFormId" Type="Int32" />
+          <Property Name="isNetAppointment" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="promisePeriod" Type="Int32" />
+          <Property Name="dealItemName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="itemTransactionResult" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="supervisionCount" Type="Int32" />
+          <Property Name="isInternetPublic" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="itemTypeCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="orgName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="businessTypeName" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+          <Property Name="privUpdateTypeId" Type="Int32" />
+          <Property Name="relieveWay" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="transactionTime" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="transactionLevelId" Type="Int32" />
+          <Property Name="isInvestmentProject" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="transactionTypeId" Type="Int32" />
+          <Property Name="isExpress" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="VALID" Type="Int32" Nullable="false" />
+          <Property Name="isFee" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="feeName" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="feeNorm" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="feeGist" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="feeLink" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="feeTime" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="feeAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="feeReduce" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="SEPCIALVERSION" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="areainfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AREANAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AREACODE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PARENTCODE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VALID" Type="Int32" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GxsdModelStoreContainer" CdmEntityContainer="GxsdEntities">
+          <EntitySetMapping Name="deptinfo">
+            <EntityTypeMapping TypeName="GxsdModel.deptinfo">
+              <MappingFragment StoreEntitySet="deptinfo">
+                <ScalarProperty Name="VALID" ColumnName="VALID" />
+                <ScalarProperty Name="AREACODE" ColumnName="AREACODE" />
+                <ScalarProperty Name="DEPTCODE" ColumnName="DEPTCODE" />
+                <ScalarProperty Name="DEPTNAME" ColumnName="DEPTNAME" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="materials">
+            <EntityTypeMapping TypeName="GxsdModel.materials">
+              <MappingFragment StoreEntitySet="materials">
+                <ScalarProperty Name="VALID" ColumnName="VALID" />
+                <ScalarProperty Name="dicRequireName" ColumnName="dicRequireName" />
+                <ScalarProperty Name="dicRequireCode" ColumnName="dicRequireCode" />
+                <ScalarProperty Name="num" ColumnName="num" />
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="affairdetailsid" ColumnName="affairdetailsid" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="affairstemp">
+            <EntityTypeMapping TypeName="GxsdModel.affairstemp">
+              <MappingFragment StoreEntitySet="affairstemp">
+                <ScalarProperty Name="VALID" ColumnName="VALID" />
+                <ScalarProperty Name="depCateName" ColumnName="depCateName" />
+                <ScalarProperty Name="transactionFormName" ColumnName="transactionFormName" />
+                <ScalarProperty Name="itemTypeName" ColumnName="itemTypeName" />
+                <ScalarProperty Name="transactionTypeName" ColumnName="transactionTypeName" />
+                <ScalarProperty Name="transactionTypeCode" ColumnName="transactionTypeCode" />
+                <ScalarProperty Name="promisePeriod" ColumnName="promisePeriod" />
+                <ScalarProperty Name="legalPeriod" ColumnName="legalPeriod" />
+                <ScalarProperty Name="AREACODE" ColumnName="AREACODE" />
+                <ScalarProperty Name="orgName" ColumnName="orgName" />
+                <ScalarProperty Name="DEPTCODE" ColumnName="DEPTCODE" />
+                <ScalarProperty Name="itemImpleCode" ColumnName="itemImpleCode" />
+                <ScalarProperty Name="itemBasicCode" ColumnName="itemBasicCode" />
+                <ScalarProperty Name="dealItemName" ColumnName="dealItemName" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="dic_dictionarydto">
+            <EntityTypeMapping TypeName="GxsdModel.dic_dictionarydto">
+              <MappingFragment StoreEntitySet="dic_dictionarydto">
+                <ScalarProperty Name="VALID" ColumnName="VALID" />
+                <ScalarProperty Name="isLocked" ColumnName="isLocked" />
+                <ScalarProperty Name="valueCode" ColumnName="valueCode" />
+                <ScalarProperty Name="code" ColumnName="code" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="valueName" ColumnName="valueName" />
+                <ScalarProperty Name="affairdetailsid" ColumnName="affairdetailsid" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="affairguidetemp">
+            <EntityTypeMapping TypeName="GxsdModel.affairguidetemp">
+              <MappingFragment StoreEntitySet="affairguidetemp">
+                <ScalarProperty Name="limitNum" ColumnName="limitNum" />
+                <ScalarProperty Name="faq" ColumnName="faq" />
+                <ScalarProperty Name="accountabilityGist" ColumnName="accountabilityGist" />
+                <ScalarProperty Name="acceptRange" ColumnName="acceptRange" />
+                <ScalarProperty Name="setGist" ColumnName="setGist" />
+                <ScalarProperty Name="unapproveCondition" ColumnName="unapproveCondition" />
+                <ScalarProperty Name="transactionSite" ColumnName="transactionSite" />
+                <ScalarProperty Name="itemCommonProcess" ColumnName="itemCommonProcess" />
+                <ScalarProperty Name="consultWay" ColumnName="consultWay" />
+                <ScalarProperty Name="accountabilityInfo" ColumnName="accountabilityInfo" />
+                <ScalarProperty Name="approveCondition" ColumnName="approveCondition" />
+                <ScalarProperty Name="acceptCondition" ColumnName="acceptCondition" />
+                <ScalarProperty Name="dutyInfo" ColumnName="dutyInfo" />
+                <ScalarProperty Name="superviseWay" ColumnName="superviseWay" />
+                <ScalarProperty Name="approveRange" ColumnName="approveRange" />
+                <ScalarProperty Name="unacceptCondition" ColumnName="unacceptCondition" />
+                <ScalarProperty Name="affairdetailsid" ColumnName="affairdetailsid" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="affairdetails">
+            <EntityTypeMapping TypeName="GxsdModel.affairdetails">
+              <MappingFragment StoreEntitySet="affairdetails">
+                <ScalarProperty Name="SEPCIALVERSION" ColumnName="SEPCIALVERSION" />
+                <ScalarProperty Name="feeReduce" ColumnName="feeReduce" />
+                <ScalarProperty Name="feeAddress" ColumnName="feeAddress" />
+                <ScalarProperty Name="feeTime" ColumnName="feeTime" />
+                <ScalarProperty Name="feeLink" ColumnName="feeLink" />
+                <ScalarProperty Name="feeGist" ColumnName="feeGist" />
+                <ScalarProperty Name="feeNorm" ColumnName="feeNorm" />
+                <ScalarProperty Name="feeName" ColumnName="feeName" />
+                <ScalarProperty Name="isFee" ColumnName="isFee" />
+                <ScalarProperty Name="VALID" ColumnName="VALID" />
+                <ScalarProperty Name="isExpress" ColumnName="isExpress" />
+                <ScalarProperty Name="transactionTypeId" ColumnName="transactionTypeId" />
+                <ScalarProperty Name="isInvestmentProject" ColumnName="isInvestmentProject" />
+                <ScalarProperty Name="transactionLevelId" ColumnName="transactionLevelId" />
+                <ScalarProperty Name="transactionTime" ColumnName="transactionTime" />
+                <ScalarProperty Name="relieveWay" ColumnName="relieveWay" />
+                <ScalarProperty Name="privUpdateTypeId" ColumnName="privUpdateTypeId" />
+                <ScalarProperty Name="businessTypeName" ColumnName="businessTypeName" />
+                <ScalarProperty Name="orgName" ColumnName="orgName" />
+                <ScalarProperty Name="itemTypeCode" ColumnName="itemTypeCode" />
+                <ScalarProperty Name="isInternetPublic" ColumnName="isInternetPublic" />
+                <ScalarProperty Name="supervisionCount" ColumnName="supervisionCount" />
+                <ScalarProperty Name="itemTransactionResult" ColumnName="itemTransactionResult" />
+                <ScalarProperty Name="dealItemName" ColumnName="dealItemName" />
+                <ScalarProperty Name="promisePeriod" ColumnName="promisePeriod" />
+                <ScalarProperty Name="isNetAppointment" ColumnName="isNetAppointment" />
+                <ScalarProperty Name="transactionFormId" ColumnName="transactionFormId" />
+                <ScalarProperty Name="isNetPay" ColumnName="isNetPay" />
+                <ScalarProperty Name="exeTierName" ColumnName="exeTierName" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="orgCode" ColumnName="orgCode" />
+                <ScalarProperty Name="itemImpleCode" ColumnName="itemImpleCode" />
+                <ScalarProperty Name="orgId" ColumnName="orgId" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="legalPeriod" ColumnName="legalPeriod" />
+                <ScalarProperty Name="depCateName" ColumnName="depCateName" />
+                <ScalarProperty Name="spObjectName" ColumnName="spObjectName" />
+                <ScalarProperty Name="itemBasicCode" ColumnName="itemBasicCode" />
+                <ScalarProperty Name="transactionOrgTypeId" ColumnName="transactionOrgTypeId" />
+                <ScalarProperty Name="itemTypeName" ColumnName="itemTypeName" />
+                <ScalarProperty Name="generalTransactionRangeId" ColumnName="generalTransactionRangeId" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="areainfo">
+            <EntityTypeMapping TypeName="GxsdModel.areainfo">
+              <MappingFragment StoreEntitySet="areainfo">
+                <ScalarProperty Name="VALID" ColumnName="VALID" />
+                <ScalarProperty Name="PARENTCODE" ColumnName="PARENTCODE" />
+                <ScalarProperty Name="AREACODE" ColumnName="AREACODE" />
+                <ScalarProperty Name="AREANAME" ColumnName="AREANAME" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GxsdModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="GxsdEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="deptinfo" EntityType="GxsdModel.deptinfo" />
+    <EntitySet Name="materials" EntityType="GxsdModel.materials" />
+    <EntitySet Name="affairstemp" EntityType="GxsdModel.affairstemp" />
+    <EntitySet Name="dic_dictionarydto" EntityType="GxsdModel.dic_dictionarydto" />
+    <EntitySet Name="affairguidetemp" EntityType="GxsdModel.affairguidetemp" />
+    <EntitySet Name="affairdetails" EntityType="GxsdModel.affairdetails" />
+    <EntitySet Name="areainfo" EntityType="GxsdModel.areainfo" />
+  </EntityContainer>
+  <EntityType Name="deptinfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DEPTNAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DEPTCODE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AREACODE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VALID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="materials">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="affairdetailsid" Type="Int32" />
+    <Property Name="name" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="code" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="num" Type="Int32" />
+    <Property Name="dicRequireCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dicRequireName" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="VALID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="affairstemp">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="dealItemName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="itemBasicCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="itemImpleCode" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="DEPTCODE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="orgName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AREACODE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="legalPeriod" Type="Int32" />
+    <Property Name="promisePeriod" Type="Int32" />
+    <Property Name="transactionTypeCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="transactionTypeName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="itemTypeName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="transactionFormName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="depCateName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="VALID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="dic_dictionarydto">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="affairdetailsid" Type="Int32" />
+    <Property Name="valueName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="code" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="valueCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="isLocked" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="VALID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="affairguidetemp">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="affairdetailsid" Type="Int32" />
+    <Property Name="unacceptCondition" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="approveRange" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="superviseWay" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="dutyInfo" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="acceptCondition" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="approveCondition" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="accountabilityInfo" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="consultWay" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="itemCommonProcess" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="transactionSite" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="unapproveCondition" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="setGist" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="acceptRange" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="accountabilityGist" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="faq" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="limitNum" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="affairdetails">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="generalTransactionRangeId" Type="Int32" />
+    <Property Name="itemTypeName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="transactionOrgTypeId" Type="Int32" />
+    <Property Name="itemBasicCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="spObjectName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="depCateName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="legalPeriod" Type="Int32" />
+    <Property Name="version" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="orgId" Type="Int32" />
+    <Property Name="itemImpleCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="orgCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="name" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="exeTierName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="isNetPay" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="transactionFormId" Type="Int32" />
+    <Property Name="isNetAppointment" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="promisePeriod" Type="Int32" />
+    <Property Name="dealItemName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="itemTransactionResult" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="supervisionCount" Type="Int32" />
+    <Property Name="isInternetPublic" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="itemTypeCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="orgName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="businessTypeName" Type="String" MaxLength="65535" FixedLength="false" Unicode="false" />
+    <Property Name="privUpdateTypeId" Type="Int32" />
+    <Property Name="relieveWay" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="transactionTime" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="transactionLevelId" Type="Int32" />
+    <Property Name="isInvestmentProject" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="transactionTypeId" Type="Int32" />
+    <Property Name="isExpress" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="VALID" Type="Int32" Nullable="false" />
+    <Property Name="isFee" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="feeName" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="feeNorm" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="feeGist" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="feeLink" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="feeTime" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="feeAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="feeReduce" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="SEPCIALVERSION" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="areainfo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AREANAME" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AREACODE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PARENTCODE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VALID" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>

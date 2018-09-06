@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GxsdModelStoreContainer" CdmEntityContainer="GxsdEntities">
+    <EntitySetMapping Name="deptinfo">
+      <EntityTypeMapping TypeName="GxsdModel.deptinfo">
+        <MappingFragment StoreEntitySet="deptinfo">
+          <ScalarProperty Name="VALID" ColumnName="VALID" />
+          <ScalarProperty Name="AREACODE" ColumnName="AREACODE" />
+          <ScalarProperty Name="DEPTCODE" ColumnName="DEPTCODE" />
+          <ScalarProperty Name="DEPTNAME" ColumnName="DEPTNAME" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="materials">
+      <EntityTypeMapping TypeName="GxsdModel.materials">
+        <MappingFragment StoreEntitySet="materials">
+          <ScalarProperty Name="VALID" ColumnName="VALID" />
+          <ScalarProperty Name="dicRequireName" ColumnName="dicRequireName" />
+          <ScalarProperty Name="dicRequireCode" ColumnName="dicRequireCode" />
+          <ScalarProperty Name="num" ColumnName="num" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="affairdetailsid" ColumnName="affairdetailsid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="affairstemp">
+      <EntityTypeMapping TypeName="GxsdModel.affairstemp">
+        <MappingFragment StoreEntitySet="affairstemp">
+          <ScalarProperty Name="VALID" ColumnName="VALID" />
+          <ScalarProperty Name="depCateName" ColumnName="depCateName" />
+          <ScalarProperty Name="transactionFormName" ColumnName="transactionFormName" />
+          <ScalarProperty Name="itemTypeName" ColumnName="itemTypeName" />
+          <ScalarProperty Name="transactionTypeName" ColumnName="transactionTypeName" />
+          <ScalarProperty Name="transactionTypeCode" ColumnName="transactionTypeCode" />
+          <ScalarProperty Name="promisePeriod" ColumnName="promisePeriod" />
+          <ScalarProperty Name="legalPeriod" ColumnName="legalPeriod" />
+          <ScalarProperty Name="AREACODE" ColumnName="AREACODE" />
+          <ScalarProperty Name="orgName" ColumnName="orgName" />
+          <ScalarProperty Name="DEPTCODE" ColumnName="DEPTCODE" />
+          <ScalarProperty Name="itemImpleCode" ColumnName="itemImpleCode" />
+          <ScalarProperty Name="itemBasicCode" ColumnName="itemBasicCode" />
+          <ScalarProperty Name="dealItemName" ColumnName="dealItemName" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dic_dictionarydto">
+      <EntityTypeMapping TypeName="GxsdModel.dic_dictionarydto">
+        <MappingFragment StoreEntitySet="dic_dictionarydto">
+          <ScalarProperty Name="VALID" ColumnName="VALID" />
+          <ScalarProperty Name="isLocked" ColumnName="isLocked" />
+          <ScalarProperty Name="valueCode" ColumnName="valueCode" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="valueName" ColumnName="valueName" />
+          <ScalarProperty Name="affairdetailsid" ColumnName="affairdetailsid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="affairguidetemp">
+      <EntityTypeMapping TypeName="GxsdModel.affairguidetemp">
+        <MappingFragment StoreEntitySet="affairguidetemp">
+          <ScalarProperty Name="limitNum" ColumnName="limitNum" />
+          <ScalarProperty Name="faq" ColumnName="faq" />
+          <ScalarProperty Name="accountabilityGist" ColumnName="accountabilityGist" />
+          <ScalarProperty Name="acceptRange" ColumnName="acceptRange" />
+          <ScalarProperty Name="setGist" ColumnName="setGist" />
+          <ScalarProperty Name="unapproveCondition" ColumnName="unapproveCondition" />
+          <ScalarProperty Name="transactionSite" ColumnName="transactionSite" />
+          <ScalarProperty Name="itemCommonProcess" ColumnName="itemCommonProcess" />
+          <ScalarProperty Name="consultWay" ColumnName="consultWay" />
+          <ScalarProperty Name="accountabilityInfo" ColumnName="accountabilityInfo" />
+          <ScalarProperty Name="approveCondition" ColumnName="approveCondition" />
+          <ScalarProperty Name="acceptCondition" ColumnName="acceptCondition" />
+          <ScalarProperty Name="dutyInfo" ColumnName="dutyInfo" />
+          <ScalarProperty Name="superviseWay" ColumnName="superviseWay" />
+          <ScalarProperty Name="approveRange" ColumnName="approveRange" />
+          <ScalarProperty Name="unacceptCondition" ColumnName="unacceptCondition" />
+          <ScalarProperty Name="affairdetailsid" ColumnName="affairdetailsid" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="affairdetails">
+      <EntityTypeMapping TypeName="GxsdModel.affairdetails">
+        <MappingFragment StoreEntitySet="affairdetails">
+          <ScalarProperty Name="SEPCIALVERSION" ColumnName="SEPCIALVERSION" />
+          <ScalarProperty Name="feeReduce" ColumnName="feeReduce" />
+          <ScalarProperty Name="feeAddress" ColumnName="feeAddress" />
+          <ScalarProperty Name="feeTime" ColumnName="feeTime" />
+          <ScalarProperty Name="feeLink" ColumnName="feeLink" />
+          <ScalarProperty Name="feeGist" ColumnName="feeGist" />
+          <ScalarProperty Name="feeNorm" ColumnName="feeNorm" />
+          <ScalarProperty Name="feeName" ColumnName="feeName" />
+          <ScalarProperty Name="isFee" ColumnName="isFee" />
+          <ScalarProperty Name="VALID" ColumnName="VALID" />
+          <ScalarProperty Name="isExpress" ColumnName="isExpress" />
+          <ScalarProperty Name="transactionTypeId" ColumnName="transactionTypeId" />
+          <ScalarProperty Name="isInvestmentProject" ColumnName="isInvestmentProject" />
+          <ScalarProperty Name="transactionLevelId" ColumnName="transactionLevelId" />
+          <ScalarProperty Name="transactionTime" ColumnName="transactionTime" />
+          <ScalarProperty Name="relieveWay" ColumnName="relieveWay" />
+          <ScalarProperty Name="privUpdateTypeId" ColumnName="privUpdateTypeId" />
+          <ScalarProperty Name="businessTypeName" ColumnName="businessTypeName" />
+          <ScalarProperty Name="orgName" ColumnName="orgName" />
+          <ScalarProperty Name="itemTypeCode" ColumnName="itemTypeCode" />
+          <ScalarProperty Name="isInternetPublic" ColumnName="isInternetPublic" />
+          <ScalarProperty Name="supervisionCount" ColumnName="supervisionCount" />
+          <ScalarProperty Name="itemTransactionResult" ColumnName="itemTransactionResult" />
+          <ScalarProperty Name="dealItemName" ColumnName="dealItemName" />
+          <ScalarProperty Name="promisePeriod" ColumnName="promisePeriod" />
+          <ScalarProperty Name="isNetAppointment" ColumnName="isNetAppointment" />
+          <ScalarProperty Name="transactionFormId" ColumnName="transactionFormId" />
+          <ScalarProperty Name="isNetPay" ColumnName="isNetPay" />
+          <ScalarProperty Name="exeTierName" ColumnName="exeTierName" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="orgCode" ColumnName="orgCode" />
+          <ScalarProperty Name="itemImpleCode" ColumnName="itemImpleCode" />
+          <ScalarProperty Name="orgId" ColumnName="orgId" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="legalPeriod" ColumnName="legalPeriod" />
+          <ScalarProperty Name="depCateName" ColumnName="depCateName" />
+          <ScalarProperty Name="spObjectName" ColumnName="spObjectName" />
+          <ScalarProperty Name="itemBasicCode" ColumnName="itemBasicCode" />
+          <ScalarProperty Name="transactionOrgTypeId" ColumnName="transactionOrgTypeId" />
+          <ScalarProperty Name="itemTypeName" ColumnName="itemTypeName" />
+          <ScalarProperty Name="generalTransactionRangeId" ColumnName="generalTransactionRangeId" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="areainfo">
+      <EntityTypeMapping TypeName="GxsdModel.areainfo">
+        <MappingFragment StoreEntitySet="areainfo">
+          <ScalarProperty Name="VALID" ColumnName="VALID" />
+          <ScalarProperty Name="PARENTCODE" ColumnName="PARENTCODE" />
+          <ScalarProperty Name="AREACODE" ColumnName="AREACODE" />
+          <ScalarProperty Name="AREANAME" ColumnName="AREANAME" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

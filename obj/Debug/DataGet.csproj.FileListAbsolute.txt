@@ -1,0 +1,13 @@
+E:\工作\YMS项目\自然人资料\昆明项目\云南昆明\昆明市与云南省对接\对接程序\GXSDDataService\DataGet\bin\Debug\DataGet.exe.config
+E:\工作\YMS项目\自然人资料\昆明项目\云南昆明\昆明市与云南省对接\对接程序\GXSDDataService\DataGet\bin\Debug\DataGet.exe
+E:\工作\YMS项目\自然人资料\昆明项目\云南昆明\昆明市与云南省对接\对接程序\GXSDDataService\DataGet\bin\Debug\DataGet.pdb
+E:\工作\YMS项目\自然人资料\昆明项目\云南昆明\昆明市与云南省对接\对接程序\GXSDDataService\DataGet\bin\Debug\EntityFramework.dll
+E:\工作\YMS项目\自然人资料\昆明项目\云南昆明\昆明市与云南省对接\对接程序\GXSDDataService\DataGet\bin\Debug\log4net.dll
+E:\工作\YMS项目\自然人资料\昆明项目\云南昆明\昆明市与云南省对接\对接程序\GXSDDataService\DataGet\bin\Debug\MySql.Data.dll
+E:\工作\YMS项目\自然人资料\昆明项目\云南昆明\昆明市与云南省对接\对接程序\GXSDDataService\DataGet\bin\Debug\Newtonsoft.Json.dll
+E:\工作\YMS项目\自然人资料\昆明项目\云南昆明\昆明市与云南省对接\对接程序\GXSDDataService\DataGet\bin\Debug\EntityFramework.xml
+E:\工作\YMS项目\自然人资料\昆明项目\云南昆明\昆明市与云南省对接\对接程序\GXSDDataService\DataGet\bin\Debug\log4net.xml
+E:\工作\YMS项目\自然人资料\昆明项目\云南昆明\昆明市与云南省对接\对接程序\GXSDDataService\DataGet\bin\Debug\Newtonsoft.Json.xml
+E:\工作\YMS项目\自然人资料\昆明项目\云南昆明\昆明市与云南省对接\对接程序\GXSDDataService\DataGet\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\工作\YMS项目\自然人资料\昆明项目\云南昆明\昆明市与云南省对接\对接程序\GXSDDataService\DataGet\obj\Debug\DataGet.exe
+E:\工作\YMS项目\自然人资料\昆明项目\云南昆明\昆明市与云南省对接\对接程序\GXSDDataService\DataGet\obj\Debug\DataGet.pdb
